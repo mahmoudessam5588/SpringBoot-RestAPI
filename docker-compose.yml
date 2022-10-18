@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql
+    container_name: springboot2_mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - devdojo-data:/var/lib/mysql
+volumes:
+  devdojo-data:
